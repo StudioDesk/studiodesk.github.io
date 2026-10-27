@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Studio desk: a team of AI agents for your projects</title>
+    <meta
+      name="description"
+      content="Hand an idea to a team of AI agents. Studio desk plans, builds, tests and reviews the work, with you making the calls. Runs on your computer through your Claude Code or Codex CLI subscription. Tested on Windows 10 and 11."
+    />
+    <meta name="theme-color" content="#12111c" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f4f2fa" media="(prefers-color-scheme: light)" />
+    <link rel="canonical" href="https://studiodesk.github.io/" />
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+    <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/site.css" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Studio desk" />
+    <meta property="og:title" content="Studio desk: you bring the ideas, it brings the team" />
+    <meta
+      property="og:description"
+      content="Hand an idea to a team of AI agents and get back work that's been planned, built, tested and reviewed, with you making the calls."
+    />
+    <meta property="og:url" content="https://studiodesk.github.io/" />
+    <meta property="og:image" content="https://studiodesk.github.io/assets/social-preview.png" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta property="og:image:alt" content="Your ideas. Studio desk brings the team." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to the content</a>
+
+    <header class="nav">
+      <div class="wrap nav__inner">
+        <a class="brand" href="./"><img src="assets/logo.svg" alt="" width="30" height="30" />Studio desk</a>
+        <nav class="nav__links" aria-label="Sections">
+          <a class="nav__hide" href="#how">How it works</a>
+          <a class="nav__hide" href="#why">Why</a>
+          <a class="nav__hide" href="#start">Get started</a>
+          <a href="#faq">Questions</a>
+          <a href="blog/">Blog</a>
+        </nav>
+        <a class="btn btn--sm" href="https://github.com/studiodesk/studio-desk">
+          <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrap hero__grid">
+          <div>
+            <span class="eyebrow enter" style="--i: 0">Free and open source</span>
+            <h1 class="enter" style="--i: 1; margin-top: 14px">
+              <span class="line you">You bring the ideas.</span>
+              <span class="line">Studio desk brings the team.</span>
+            </h1>
+            <p class="lead enter" style="--i: 2">
+              Hand an idea to a team of AI agents and get back work that's been planned, built, tested and reviewed, with
+              you making the calls. It runs on your computer, on the Claude Code or Codex CLI subscription you already
+              have.
+            </p>
+            <div class="hero__actions enter" style="--i: 3">
+              <a class="btn btn--primary" href="https://github.com/studiodesk/studio-desk">
+                Get Studio desk on GitHub
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </a>
+              <a class="btn" href="#how">See how it works</a>
+            </div>
+            <div class="hero__facts enter" style="--i: 4">
+              <span class="chip chip--brand"><span class="chip__dot"></span>MIT license</span>
+              <span class="chip chip--brand"><span class="chip__dot"></span>Runs on your computer</span>
+              <span class="chip chip--brand"><span class="chip__dot"></span>No API keys</span>
+              <span class="chip chip--brand"><span class="chip__dot"></span>Windows 10 and 11</span>
+            </div>
+          </div>
+
+          <div class="enter" style="--i: 3">
+            <p class="sr">
+              An illustration of one idea going through the team: the planner plans it, you approve the plan, an agent
+              builds it, the checks run its tests, and the reviewer sends it back once before it's merged.
+            </p>
+            <div class="flow card" data-flow aria-hidden="true">
+              <div class="flow__top">
+                <span class="flow__title">How an idea goes</span>
+                <span class="chip chip--ok" data-status><span class="chip__dot"></span><span data-label>Merged</span></span>
+              </div>
+              <div class="flow__idea">
+                <span class="flow__bulb">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" /></svg>
+                </span>
+                <span>
+                  <span class="flow__idea-label">Your idea</span>
+                  <span class="flow__idea-text"><span data-idea="Let items have a due date, and list overdue items first.">Let items have a due date, and list overdue items first.</span><span class="flow__caret" hidden></span></span>
+                </span>
+              </div>
+              <div class="flow__track">
+                <div class="flow__rail"><span class="flow__rail-fill" style="width: 100%"></span></div>
+                <div class="station" data-role="planner" data-state="done" data-idle="Plans it">
+                  <span class="station__tile"><span class="face" data-face="planner" data-size="38" data-done><svg class="sd-avatar face-open" data-state="idle" width="38" height="38" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-2.434s;--tempo:1.06"><g class="sd-avatar__whole"><path d="M14 6h12a12 12 0 0 1 12 12v8a12 12 0 0 1 -12 12h-12a12 12 0 0 1 -12 -12v-8a12 12 0 0 1 12 -12z" fill="#FF8A3D" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 0)"><g class="sd-avatar__top"><path d="M20 7V2" fill="none" stroke="#FF8A3D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.8 2.5a2.2 2.2 0 1 0 4.4 0a2.2 2.2 0 1 0 -4.4 0z" fill="#FFD23F" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__eyes"><path d="M10 20a4 4 0 1 0 8 0a4 4 0 1 0 -8 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 20a4 4 0 1 0 8 0a4 4 0 1 0 -8 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M12.8 20.6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M24.8 20.6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M15 29q5 4 10 0" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg><svg class="sd-avatar face-happy" data-state="done" width="38" height="38" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-2.434s;--tempo:1.06"><g class="sd-avatar__whole"><path d="M14 6h12a12 12 0 0 1 12 12v8a12 12 0 0 1 -12 12h-12a12 12 0 0 1 -12 -12v-8a12 12 0 0 1 12 -12z" fill="#FF8A3D" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 0)"><g class="sd-avatar__top"><path d="M20 7V2" fill="none" stroke="#FF8A3D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.8 2.5a2.2 2.2 0 1 0 4.4 0a2.2 2.2 0 1 0 -4.4 0z" fill="#FFD23F" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__eyes"><path d="M10.5 21q3.5 -4.48 7 0" fill="none" stroke="#1D1B33" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M22.5 21q3.5 -4.48 7 0" fill="none" stroke="#1D1B33" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"></g></g><g class="sd-avatar__mouth"><path d="M15 29q5 4 10 0" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></span><span class="station__badge">✓</span></span>
+                  <span class="station__role">Planner</span><span class="station__note">One story</span>
+                </div>
+                <div class="station" data-role="you" data-state="done" data-idle="Approves">
+                  <span class="station__tile">
+                    <span class="you-face"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8.5" r="3.6" /><path d="M4.8 20.5c1-4 3.9-6.3 7.2-6.3s6.2 2.3 7.2 6.3z" /></svg></span>
+                    <span class="station__badge">✓</span>
+                  </span>
+                  <span class="station__role">You</span><span class="station__note">Approved</span>
+                </div>
+                <div class="station" data-role="agent" data-state="done" data-idle="Builds it">
+                  <span class="station__tile"><span class="face" data-face="agent" data-size="38" data-done><svg class="sd-avatar face-open" data-state="idle" width="38" height="38" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-1.258s;--tempo:1.1"><g class="sd-avatar__whole"><path d="M13 4h14a11 11 0 0 1 11 11v12a11 11 0 0 1 -11 11h-14a11 11 0 0 1 -11 -11v-12a11 11 0 0 1 11 -11z" fill="#7B61FF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 0)"><g class="sd-avatar__top"><path d="M1.5 16h0a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1 -1.5 1.5h-0a1.5 1.5 0 0 1 -1.5 -1.5v-5a1.5 1.5 0 0 1 1.5 -1.5z" fill="#D9D6E8" stroke="#1D1B33" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.5 16h0a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1 -1.5 1.5h-0a1.5 1.5 0 0 1 -1.5 -1.5v-5a1.5 1.5 0 0 1 1.5 -1.5z" fill="#D9D6E8" stroke="#1D1B33" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__eyes"><path d="M13 14h14a5 5 0 0 1 5 5v0a5 5 0 0 1 -5 5h-14a5 5 0 0 1 -5 -5v-0a5 5 0 0 1 5 -5z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M12.8 19a2.2 2.2 0 1 0 4.4 0a2.2 2.2 0 1 0 -4.4 0z" fill="#9EF0FF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M22.8 19a2.2 2.2 0 1 0 4.4 0a2.2 2.2 0 1 0 -4.4 0z" fill="#9EF0FF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M16 30h8" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg><svg class="sd-avatar face-happy" data-state="done" width="38" height="38" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-1.258s;--tempo:1.1"><g class="sd-avatar__whole"><path d="M13 4h14a11 11 0 0 1 11 11v12a11 11 0 0 1 -11 11h-14a11 11 0 0 1 -11 -11v-12a11 11 0 0 1 11 -11z" fill="#7B61FF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 0)"><g class="sd-avatar__top"><path d="M1.5 16h0a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1 -1.5 1.5h-0a1.5 1.5 0 0 1 -1.5 -1.5v-5a1.5 1.5 0 0 1 1.5 -1.5z" fill="#D9D6E8" stroke="#1D1B33" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.5 16h0a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1 -1.5 1.5h-0a1.5 1.5 0 0 1 -1.5 -1.5v-5a1.5 1.5 0 0 1 1.5 -1.5z" fill="#D9D6E8" stroke="#1D1B33" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__eyes"><path d="M13 14h14a5 5 0 0 1 5 5v0a5 5 0 0 1 -5 5h-14a5 5 0 0 1 -5 -5v-0a5 5 0 0 1 5 -5z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.4 20.4q2.6 -3.33 5.2 0" fill="none" stroke="#9EF0FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22.4 20.4q2.6 -3.33 5.2 0" fill="none" stroke="#9EF0FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"></g></g><g class="sd-avatar__mouth"><path d="M16 30h8" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></span><span class="station__badge">✓</span></span>
+                  <span class="station__role">Agent</span><span class="station__note">Fixed</span>
+                </div>
+                <div class="station" data-role="checks" data-state="done" data-idle="Runs tests">
+                  <span class="station__tile"><span class="face" data-face="checks" data-size="38" data-done><svg class="sd-avatar face-open" data-state="idle" width="38" height="38" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-0.86s;--tempo:0.95"><g class="sd-avatar__whole"><path d="M2 21a18 18 0 1 0 36 0a18 18 0 1 0 -36 0z" fill="#2BBF95" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 -3)"><g class="sd-avatar__top"></g></g><g class="sd-avatar__eyes"><path d="M12 19a8 8 0 1 0 16 0a8 8 0 1 0 -16 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M16 19a4 4 0 1 0 8 0a4 4 0 1 0 -8 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.2 17.5a1.3 1.3 0 1 0 2.6 0a1.3 1.3 0 1 0 -2.6 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M14 31h12" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg><svg class="sd-avatar face-happy" data-state="done" width="38" height="38" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-0.86s;--tempo:0.95"><g class="sd-avatar__whole"><path d="M2 21a18 18 0 1 0 36 0a18 18 0 1 0 -36 0z" fill="#2BBF95" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 -3)"><g class="sd-avatar__top"></g></g><g class="sd-avatar__eyes"><path d="M13.6 20.6q6.4 -8.19 12.8 0" fill="none" stroke="#1D1B33" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"></g></g><g class="sd-avatar__mouth"><path d="M14 31h12" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></span><span class="station__badge">✓</span></span>
+                  <span class="station__role">Checks</span><span class="station__note">19 of 19</span>
+                </div>
+                <div class="station" data-role="reviewer" data-state="done" data-idle="Signs off">
+                  <span class="station__tile"><span class="face" data-face="reviewer" data-size="38" data-done><svg class="sd-avatar face-open" data-state="idle" width="38" height="38" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-1.608s;--tempo:1.09"><g class="sd-avatar__whole"><path d="M18 5h4a16 16 0 0 1 16 16v1a16 16 0 0 1 -16 16h-4a16 16 0 0 1 -16 -16v-1a16 16 0 0 1 16 -16z" fill="#F0629B" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 -1)"><g class="sd-avatar__top"></g></g><g class="sd-avatar__eyes"><path d="M8 19a5.5 5.5 0 1 0 11 0a5.5 5.5 0 1 0 -11 0z" fill="#FFFFFF" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 19a5.5 5.5 0 1 0 11 0a5.5 5.5 0 1 0 -11 0z" fill="#FFFFFF" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 19h2" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M11.5 19.5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M24.5 19.5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M16 30q4-2 8 0" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg><svg class="sd-avatar face-happy" data-state="done" width="38" height="38" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-1.608s;--tempo:1.09"><g class="sd-avatar__whole"><path d="M18 5h4a16 16 0 0 1 16 16v1a16 16 0 0 1 -16 16h-4a16 16 0 0 1 -16 -16v-1a16 16 0 0 1 16 -16z" fill="#F0629B" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 -1)"><g class="sd-avatar__top"></g></g><g class="sd-avatar__eyes"><path d="M8 19a5.5 5.5 0 1 0 11 0a5.5 5.5 0 1 0 -11 0z" fill="#FFFFFF" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 19a5.5 5.5 0 1 0 11 0a5.5 5.5 0 1 0 -11 0z" fill="#FFFFFF" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 19h2" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.7 20.4q2.8 -3.58 5.6 0" fill="none" stroke="#1D1B33" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M23.7 20.4q2.8 -3.58 5.6 0" fill="none" stroke="#1D1B33" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"></g></g><g class="sd-avatar__mouth"><path d="M16 30q4-2 8 0" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></span><span class="station__badge">✓</span></span>
+                  <span class="station__role">Reviewer</span><span class="station__note">Passed</span>
+                </div>
+              </div>
+              <ol class="flow__log">
+                <li><span class="who who--reviewer">Reviewer</span><span class="what">sent it back: an item due today shows as overdue</span></li>
+                <li><span class="who who--agent">Agent</span><span class="what">fixed it, starting from the review</span></li>
+                <li><span class="who who--checks">Checks</span><span class="what">19 of 19 tests passed, in the sandbox</span></li>
+                <li><span class="who who--reviewer">Reviewer</span><span class="what">passed it</span></li>
+                <li><span class="who who--done">Done</span><span class="what">merged into your branch</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how">
+        <div class="wrap">
+          <div class="section__head reveal">
+            <span class="eyebrow">How it works</span>
+            <h2>From idea to done</h2>
+            <p class="lead">Describe what you want in plain words. Then the team takes it from there.</p>
+          </div>
+          <ol class="steps">
+            <li class="step card reveal" style="--i: 0">
+              <div><h3>A planner turns your idea into work</h3><p>Stories for code, steps for everything else.</p></div>
+            </li>
+            <li class="step step--you card reveal" style="--i: 1">
+              <div><h3>You approve the plan</h3><p>Every project starts on house rules where every plan waits for you.</p></div>
+            </li>
+            <li class="step card reveal" style="--i: 2">
+              <div><h3>Agents do the work</h3><p>Each in a copy of its own.</p></div>
+            </li>
+            <li class="step card reveal" style="--i: 0">
+              <div><h3>Checks run your tests</h3><p>On every code change, in a sandbox.</p></div>
+            </li>
+            <li class="step card reveal" style="--i: 1">
+              <div><h3>A reviewer signs off</h3><p>Or sends back anything that falls short to be fixed. Retries remember what went wrong last time.</p></div>
+            </li>
+            <li class="step card reveal" style="--i: 2">
+              <div><h3>It goes in</h3><p>Code is merged into your branch; other work is ready for you to read.</p></div>
+            </li>
+          </ol>
+          <div class="example reveal">
+            <div class="faces">
+              <span class="face-tile"><span class="face" data-face="planner" data-size="38"><svg class="sd-avatar face-open" data-state="idle" width="38" height="38" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-2.434s;--tempo:1.06"><g class="sd-avatar__whole"><path d="M14 6h12a12 12 0 0 1 12 12v8a12 12 0 0 1 -12 12h-12a12 12 0 0 1 -12 -12v-8a12 12 0 0 1 12 -12z" fill="#FF8A3D" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 0)"><g class="sd-avatar__top"><path d="M20 7V2" fill="none" stroke="#FF8A3D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.8 2.5a2.2 2.2 0 1 0 4.4 0a2.2 2.2 0 1 0 -4.4 0z" fill="#FFD23F" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__eyes"><path d="M10 20a4 4 0 1 0 8 0a4 4 0 1 0 -8 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 20a4 4 0 1 0 8 0a4 4 0 1 0 -8 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M12.8 20.6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M24.8 20.6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M15 29q5 4 10 0" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></span></span>
+              <span class="face-tile"><span class="face" data-face="agent" data-size="38"><svg class="sd-avatar face-open" data-state="idle" width="38" height="38" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-1.258s;--tempo:1.1"><g class="sd-avatar__whole"><path d="M13 4h14a11 11 0 0 1 11 11v12a11 11 0 0 1 -11 11h-14a11 11 0 0 1 -11 -11v-12a11 11 0 0 1 11 -11z" fill="#7B61FF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 0)"><g class="sd-avatar__top"><path d="M1.5 16h0a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1 -1.5 1.5h-0a1.5 1.5 0 0 1 -1.5 -1.5v-5a1.5 1.5 0 0 1 1.5 -1.5z" fill="#D9D6E8" stroke="#1D1B33" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.5 16h0a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1 -1.5 1.5h-0a1.5 1.5 0 0 1 -1.5 -1.5v-5a1.5 1.5 0 0 1 1.5 -1.5z" fill="#D9D6E8" stroke="#1D1B33" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__eyes"><path d="M13 14h14a5 5 0 0 1 5 5v0a5 5 0 0 1 -5 5h-14a5 5 0 0 1 -5 -5v-0a5 5 0 0 1 5 -5z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M12.8 19a2.2 2.2 0 1 0 4.4 0a2.2 2.2 0 1 0 -4.4 0z" fill="#9EF0FF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M22.8 19a2.2 2.2 0 1 0 4.4 0a2.2 2.2 0 1 0 -4.4 0z" fill="#9EF0FF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M16 30h8" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></span></span>
+              <span class="face-tile"><span class="face" data-face="reviewer" data-size="38"><svg class="sd-avatar face-open" data-state="idle" width="38" height="38" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-1.608s;--tempo:1.09"><g class="sd-avatar__whole"><path d="M18 5h4a16 16 0 0 1 16 16v1a16 16 0 0 1 -16 16h-4a16 16 0 0 1 -16 -16v-1a16 16 0 0 1 16 -16z" fill="#F0629B" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 -1)"><g class="sd-avatar__top"></g></g><g class="sd-avatar__eyes"><path d="M8 19a5.5 5.5 0 1 0 11 0a5.5 5.5 0 1 0 -11 0z" fill="#FFFFFF" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 19a5.5 5.5 0 1 0 11 0a5.5 5.5 0 1 0 -11 0z" fill="#FFFFFF" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 19h2" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M11.5 19.5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M24.5 19.5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M16 30q4-2 8 0" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></span></span>
+            </div>
+            <p>
+              <strong>Here's how a run can go.</strong> You send the code sample an idea for its small library. The
+              planner splits it into two stories, and you approve the plan. An agent makes the first change in its own
+              copy and the tests run. The reviewer finds something that falls short and sends it back. The retry knows
+              what went wrong, the fix passes its tests and review, and the change is merged into your branch. Then the
+              second story starts.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tint" id="why">
+        <div class="wrap">
+          <div class="section__head reveal">
+            <span class="eyebrow">Why you'll like it</span>
+            <h2>A team that checks its own work, and answers to you</h2>
+            <p class="lead">
+              And it isn't only code: writing and other work get planned, done and reviewed, step by step.
+            </p>
+          </div>
+          <div class="features">
+            <article class="feature feature--wide card reveal" style="--i: 0">
+              <span class="feature__icon feature__icon--ok">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3z" /><path d="M8.5 12l2.5 2.5 4.5-5" /></svg>
+              </span>
+              <h3>It checks its own work</h3>
+              <p>
+                Every change is tested and independently reviewed before it lands. Work that falls short goes back to be
+                fixed. What reaches your branch has already passed its tests and a review. The tests run in a built-in
+                sandbox, as a separate Windows account that can change only the copy being tested and can't reach past
+                your computer.
+              </p>
+            </article>
+            <article class="feature feature--wide card reveal" style="--i: 1">
+              <span class="feature__icon feature__icon--live">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h7" /><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01" stroke-width="3" /></svg>
+              </span>
+              <h3>Nothing happens behind your back</h3>
+              <p>
+                Every step every agent takes is on the record, down to the commands it ran and why anything stopped. Read
+                every change with its tests and reviews, or open any attempt to see exactly what an agent did and said.
+                When something stops, you know why and what to do about it.
+              </p>
+            </article>
+            <article class="feature card reveal" style="--i: 0">
+              <span class="feature__icon feature__icon--you">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h9M18 7h2M4 17h3M12 17h8" /><circle cx="15.5" cy="7" r="2.3" /><circle cx="9.5" cy="17" r="2.3" /></svg>
+              </span>
+              <h3>You make the calls</h3>
+              <p>
+                When something needs you, like approving a plan or accepting a result, it shows up in plain words with
+                what to do next. House rules decide how much needs you, and you can turn that up or down any time.
+              </p>
+            </article>
+            <article class="feature card reveal" style="--i: 1">
+              <span class="feature__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2" /><path d="M3.5 19c.8-3.2 3-5 5.5-5s4.7 1.8 5.5 5" /><circle cx="17" cy="9" r="2.6" /><path d="M15.6 14.2c2.4.1 4.1 1.8 4.9 4.8" /></svg>
+              </span>
+              <h3>Your team, your way</h3>
+              <p>
+                Choose who's on each project's team, which AI tool and model each agent uses, and what they're told. Need
+                a specialist, like a copywriter? Make one just for that project.
+              </p>
+              <div class="faces">
+                <span class="face-tile"><span class="face" data-face="planner" data-size="36"><svg class="sd-avatar face-open" data-state="idle" width="36" height="36" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-2.434s;--tempo:1.06"><g class="sd-avatar__whole"><path d="M14 6h12a12 12 0 0 1 12 12v8a12 12 0 0 1 -12 12h-12a12 12 0 0 1 -12 -12v-8a12 12 0 0 1 12 -12z" fill="#FF8A3D" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 0)"><g class="sd-avatar__top"><path d="M20 7V2" fill="none" stroke="#FF8A3D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.8 2.5a2.2 2.2 0 1 0 4.4 0a2.2 2.2 0 1 0 -4.4 0z" fill="#FFD23F" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__eyes"><path d="M10 20a4 4 0 1 0 8 0a4 4 0 1 0 -8 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 20a4 4 0 1 0 8 0a4 4 0 1 0 -8 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M12.8 20.6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M24.8 20.6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M15 29q5 4 10 0" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></span></span>
+                <span class="face-tile"><span class="face" data-face="agent" data-size="36"><svg class="sd-avatar face-open" data-state="idle" width="36" height="36" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-1.258s;--tempo:1.1"><g class="sd-avatar__whole"><path d="M13 4h14a11 11 0 0 1 11 11v12a11 11 0 0 1 -11 11h-14a11 11 0 0 1 -11 -11v-12a11 11 0 0 1 11 -11z" fill="#7B61FF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 0)"><g class="sd-avatar__top"><path d="M1.5 16h0a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1 -1.5 1.5h-0a1.5 1.5 0 0 1 -1.5 -1.5v-5a1.5 1.5 0 0 1 1.5 -1.5z" fill="#D9D6E8" stroke="#1D1B33" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.5 16h0a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1 -1.5 1.5h-0a1.5 1.5 0 0 1 -1.5 -1.5v-5a1.5 1.5 0 0 1 1.5 -1.5z" fill="#D9D6E8" stroke="#1D1B33" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__eyes"><path d="M13 14h14a5 5 0 0 1 5 5v0a5 5 0 0 1 -5 5h-14a5 5 0 0 1 -5 -5v-0a5 5 0 0 1 5 -5z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M12.8 19a2.2 2.2 0 1 0 4.4 0a2.2 2.2 0 1 0 -4.4 0z" fill="#9EF0FF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M22.8 19a2.2 2.2 0 1 0 4.4 0a2.2 2.2 0 1 0 -4.4 0z" fill="#9EF0FF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M16 30h8" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></span></span>
+                <span class="face-tile"><span class="face" data-face="checks" data-size="36"><svg class="sd-avatar face-open" data-state="idle" width="36" height="36" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-0.86s;--tempo:0.95"><g class="sd-avatar__whole"><path d="M2 21a18 18 0 1 0 36 0a18 18 0 1 0 -36 0z" fill="#2BBF95" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 -3)"><g class="sd-avatar__top"></g></g><g class="sd-avatar__eyes"><path d="M12 19a8 8 0 1 0 16 0a8 8 0 1 0 -16 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M16 19a4 4 0 1 0 8 0a4 4 0 1 0 -8 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.2 17.5a1.3 1.3 0 1 0 2.6 0a1.3 1.3 0 1 0 -2.6 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M14 31h12" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></span></span>
+                <span class="face-tile"><span class="face" data-face="reviewer" data-size="36"><svg class="sd-avatar face-open" data-state="idle" width="36" height="36" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-1.608s;--tempo:1.09"><g class="sd-avatar__whole"><path d="M18 5h4a16 16 0 0 1 16 16v1a16 16 0 0 1 -16 16h-4a16 16 0 0 1 -16 -16v-1a16 16 0 0 1 16 -16z" fill="#F0629B" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 -1)"><g class="sd-avatar__top"></g></g><g class="sd-avatar__eyes"><path d="M8 19a5.5 5.5 0 1 0 11 0a5.5 5.5 0 1 0 -11 0z" fill="#FFFFFF" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 19a5.5 5.5 0 1 0 11 0a5.5 5.5 0 1 0 -11 0z" fill="#FFFFFF" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 19h2" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M11.5 19.5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M24.5 19.5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M16 30q4-2 8 0" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></span></span>
+                <span class="face-tile"><span class="face" data-face="writer" data-size="36"><svg class="sd-avatar face-open" data-state="idle" width="36" height="36" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-2.337s;--tempo:1.02"><g class="sd-avatar__whole"><path d="M14 6h12a12 12 0 0 1 12 12v8a12 12 0 0 1 -12 12h-12a12 12 0 0 1 -12 -12v-8a12 12 0 0 1 12 -12z" fill="#FFD23F" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 0)"><g class="sd-avatar__top"><path d="M27 7l5-5 3 3-5 5z" fill="#F0629B" stroke="#1D1B33" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__eyes"><path d="M10.4 20a3.6 3.6 0 1 0 7.2 0a3.6 3.6 0 1 0 -7.2 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M22.4 20a3.6 3.6 0 1 0 7.2 0a3.6 3.6 0 1 0 -7.2 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M13.8 19a1.2 1.2 0 1 0 2.4 0a1.2 1.2 0 1 0 -2.4 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M25.8 19a1.2 1.2 0 1 0 2.4 0a1.2 1.2 0 1 0 -2.4 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M15 29q2.5 2.5 5 0q2.5 2.5 5 0" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><path d="M6.6 27a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0z" fill="#FF9EC4" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M28.6 27a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0z" fill="#FF9EC4" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></svg></span></span>
+              </div>
+            </article>
+            <article class="feature card reveal" style="--i: 2">
+              <span class="feature__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2.5" /><path d="M8 20h8M12 16v4" /></svg>
+              </span>
+              <h3>It runs on what you already pay for</h3>
+              <p>
+                Your Claude Code or Codex CLI subscription. No API keys, no per-request bills. And it stays on your
+                computer: no cloud, no hosting.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="start">
+        <div class="wrap">
+          <div class="section__head reveal">
+            <span class="eyebrow">Get started</span>
+            <h2>Try it in a minute</h2>
+            <p class="lead">
+              A new install opens with two samples, a small code library with its tests and a writing brief for a
+              community garden's new volunteers, each with a team and a few ideas to send. They run for real on your own
+              sign-in.
+            </p>
+          </div>
+          <div class="start">
+            <div class="card reveal" style="--i: 0">
+              <h3>What you need</h3>
+              <ul class="needs">
+                <li><span class="tick"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.2 4.2L19 7" /></svg></span><span><strong>Windows 10 or 11</strong></span></li>
+                <li><span class="tick"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.2 4.2L19 7" /></svg></span><span><strong>Node.js 24 or later</strong></span></li>
+                <li><span class="tick"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.2 4.2L19 7" /></svg></span><span><strong>Claude Code or Codex CLI</strong>, signed in with a subscription rather than an API key. One is enough.</span></li>
+                <li><span class="tick"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.2 4.2L19 7" /></svg></span><span><strong>Git</strong>, for code projects</span></li>
+                <li><span class="tick"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.2 4.2L19 7" /></svg></span><span><strong>An administrator, once,</strong> when you set up the test sandbox from Settings</span></li>
+              </ul>
+            </div>
+            <div class="card reveal" style="--i: 1">
+              <h3>Four steps</h3>
+              <div class="terminal">
+                <div class="terminal__bar" aria-hidden="true"><span></span><span></span><span></span></div>
+                <ol>
+                  <li><span class="note"><a href="https://github.com/studiodesk/studio-desk/releases/latest">Download the release</a> and extract it somewhere you'll keep it</span></li>
+                  <li><span><span class="cmd">npm ci</span> <span class="note">once, in that folder</span></span></li>
+                  <li><span><span class="cmd">npm start</span> <span class="note">or double-click start-studio.cmd</span></span></li>
+                  <li><span class="note">Open <span class="cmd">http://127.0.0.1:4317</span> in Chrome or Edge</span></li>
+                </ol>
+              </div>
+              <p class="after">
+                Ready for your own code? Point Studio desk at a git repository and it works out what stories may change,
+                what's protected and where the tests are. It runs your tests once before it starts, and adds the project
+                only if they pass. Not code? Start a project without a folder.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tint" id="limits">
+        <div class="wrap">
+          <div class="section__head reveal">
+            <span class="eyebrow">Good to know before you start</span>
+            <h2>What Studio desk 1.0 does and doesn't do yet</h2>
+          </div>
+          <ul class="limits">
+            <li class="reveal" style="--i: 0"><strong>Only Windows 10 and 11 have been tested.</strong> macOS and Linux haven't been tested.</li>
+            <li class="reveal" style="--i: 1"><strong>Claude Code has no sandbox on Windows.</strong> The built-in sandbox covers your tests, not the agents. Claude Code runs only the commands you approve, unless you turn on auto mode, which lets Claude Code decide. Codex CLI runs in its own sandbox. Anything an agent runs has your account's access to your files and network, so approve narrowly.</li>
+            <li class="reveal" style="--i: 0"><strong>Code projects need a git repository</strong> with a clean working tree, and tests that run with Node's test runner (<code>node --test</code>), or no tests yet. Type checks, builds and anything that needs installed packages should be part of the tests.</li>
+            <li class="reveal" style="--i: 1"><strong>Each agent works on one thing at a time.</strong> A code project's stories go one after another; other work can run steps side by side when different agents are free.</li>
+            <li class="reveal" style="--i: 0"><strong>It commits locally and never pushes.</strong> When your work goes to a remote is up to you.</li>
+            <li class="reveal" style="--i: 1"><strong>Nothing is checked by eye.</strong> Reviews read the code, tests and evidence, not what's on screen.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="wrap">
+          <div class="section__head reveal">
+            <span class="eyebrow">Questions you might have</span>
+            <h2>The short answers</h2>
+          </div>
+          <div class="faq reveal">
+            <details>
+              <summary>What does it cost?</summary>
+              <p>Studio desk is free and open source under the MIT license. The AI work runs on your Claude Code or Codex CLI subscription, so there are no API keys and no per-request bills.</p>
+            </details>
+            <details>
+              <summary>What runs where?</summary>
+              <p>Studio desk itself runs on your computer: the controller, the dashboard and your data, which lives in the <code>data</code> folder next to the app. It has no cloud or hosting of its own. The AI work goes through your Claude Code or Codex CLI, signed in with your subscription. To back up, stop the controller and copy the folder.</p>
+            </details>
+            <details>
+              <summary>How safe is it?</summary>
+              <p>Agents run commands on your computer through your CLI, so the CLI and the commands you approve matter. Codex CLI runs in its own sandbox. Claude Code has no sandbox on Windows and runs only the commands you approve, unless you turn on auto mode. Approved commands apply to every project and agent, so approve narrowly. A change's tests are kept apart: they run in a disposable copy inside the built-in sandbox, as a separate Windows account that can change only that copy and can't reach past your computer. Agents never change your <code>AGENTS.md</code>, <code>CLAUDE.md</code>, <code>package.json</code>, lockfile or tool configuration, nothing is pushed, and deleting a project never changes your files or branches. Each tested change does leave a marker under <code>refs/studio/</code> in your repository, and those stay after a project is deleted.</p>
+            </details>
+            <details>
+              <summary>Does it work on a Mac?</summary>
+              <p>Not yet tested. Only Windows 10 and 11 have been tested so far; macOS and Linux haven't.</p>
+            </details>
+            <details>
+              <summary>What happens when I hit a usage limit?</summary>
+              <p>Work pauses and picks up again on its own when the limit resets. It doesn't count as something that needs you; it sorts itself out.</p>
+            </details>
+            <details>
+              <summary>What if I close it in the middle of a task?</summary>
+              <p>Close the controller any time. Anything cut off mid-step waits for you to check it, and nothing is replayed blindly.</p>
+            </details>
+            <details>
+              <summary>Is it only for code?</summary>
+              <p>No. It works on code in your git repositories and on anything else you can describe, like writing. Work that isn't code needs no folder at all.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="cta card reveal">
+            <div class="faces faces--big">
+              <span class="face-tile"><span class="face" data-face="planner" data-size="46"><svg class="sd-avatar face-open" data-state="idle" width="46" height="46" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-2.434s;--tempo:1.06"><g class="sd-avatar__whole"><path d="M14 6h12a12 12 0 0 1 12 12v8a12 12 0 0 1 -12 12h-12a12 12 0 0 1 -12 -12v-8a12 12 0 0 1 12 -12z" fill="#FF8A3D" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 0)"><g class="sd-avatar__top"><path d="M20 7V2" fill="none" stroke="#FF8A3D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.8 2.5a2.2 2.2 0 1 0 4.4 0a2.2 2.2 0 1 0 -4.4 0z" fill="#FFD23F" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__eyes"><path d="M10 20a4 4 0 1 0 8 0a4 4 0 1 0 -8 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 20a4 4 0 1 0 8 0a4 4 0 1 0 -8 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M12.8 20.6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M24.8 20.6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M15 29q5 4 10 0" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></span></span>
+              <span class="face-tile"><span class="face" data-face="agent" data-size="46"><svg class="sd-avatar face-open" data-state="idle" width="46" height="46" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-1.258s;--tempo:1.1"><g class="sd-avatar__whole"><path d="M13 4h14a11 11 0 0 1 11 11v12a11 11 0 0 1 -11 11h-14a11 11 0 0 1 -11 -11v-12a11 11 0 0 1 11 -11z" fill="#7B61FF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 0)"><g class="sd-avatar__top"><path d="M1.5 16h0a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1 -1.5 1.5h-0a1.5 1.5 0 0 1 -1.5 -1.5v-5a1.5 1.5 0 0 1 1.5 -1.5z" fill="#D9D6E8" stroke="#1D1B33" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.5 16h0a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1 -1.5 1.5h-0a1.5 1.5 0 0 1 -1.5 -1.5v-5a1.5 1.5 0 0 1 1.5 -1.5z" fill="#D9D6E8" stroke="#1D1B33" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__eyes"><path d="M13 14h14a5 5 0 0 1 5 5v0a5 5 0 0 1 -5 5h-14a5 5 0 0 1 -5 -5v-0a5 5 0 0 1 5 -5z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M12.8 19a2.2 2.2 0 1 0 4.4 0a2.2 2.2 0 1 0 -4.4 0z" fill="#9EF0FF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M22.8 19a2.2 2.2 0 1 0 4.4 0a2.2 2.2 0 1 0 -4.4 0z" fill="#9EF0FF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M16 30h8" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></span></span>
+              <span class="face-tile"><span class="face" data-face="checks" data-size="46"><svg class="sd-avatar face-open" data-state="idle" width="46" height="46" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-0.86s;--tempo:0.95"><g class="sd-avatar__whole"><path d="M2 21a18 18 0 1 0 36 0a18 18 0 1 0 -36 0z" fill="#2BBF95" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 -3)"><g class="sd-avatar__top"></g></g><g class="sd-avatar__eyes"><path d="M12 19a8 8 0 1 0 16 0a8 8 0 1 0 -16 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M16 19a4 4 0 1 0 8 0a4 4 0 1 0 -8 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.2 17.5a1.3 1.3 0 1 0 2.6 0a1.3 1.3 0 1 0 -2.6 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M14 31h12" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></span></span>
+              <span class="face-tile"><span class="face" data-face="reviewer" data-size="46"><svg class="sd-avatar face-open" data-state="idle" width="46" height="46" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-1.608s;--tempo:1.09"><g class="sd-avatar__whole"><path d="M18 5h4a16 16 0 0 1 16 16v1a16 16 0 0 1 -16 16h-4a16 16 0 0 1 -16 -16v-1a16 16 0 0 1 16 -16z" fill="#F0629B" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 -1)"><g class="sd-avatar__top"></g></g><g class="sd-avatar__eyes"><path d="M8 19a5.5 5.5 0 1 0 11 0a5.5 5.5 0 1 0 -11 0z" fill="#FFFFFF" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 19a5.5 5.5 0 1 0 11 0a5.5 5.5 0 1 0 -11 0z" fill="#FFFFFF" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 19h2" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M11.5 19.5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M24.5 19.5a2 2 0 1 0 4 0a2 2 0 1 0 -4 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M16 30q4-2 8 0" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></span></span>
+              <span class="face-tile"><span class="face" data-face="writer" data-size="46"><svg class="sd-avatar face-open" data-state="idle" width="46" height="46" viewBox="-2 -4 44 46" aria-hidden="true" style="--delay:-2.337s;--tempo:1.02"><g class="sd-avatar__whole"><path d="M14 6h12a12 12 0 0 1 12 12v8a12 12 0 0 1 -12 12h-12a12 12 0 0 1 -12 -12v-8a12 12 0 0 1 12 -12z" fill="#FFD23F" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(0 0)"><g class="sd-avatar__top"><path d="M27 7l5-5 3 3-5 5z" fill="#F0629B" stroke="#1D1B33" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__eyes"><path d="M10.4 20a3.6 3.6 0 1 0 7.2 0a3.6 3.6 0 1 0 -7.2 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M22.4 20a3.6 3.6 0 1 0 7.2 0a3.6 3.6 0 1 0 -7.2 0z" fill="#1D1B33" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><g class="sd-avatar__pupils"><path d="M13.8 19a1.2 1.2 0 1 0 2.4 0a1.2 1.2 0 1 0 -2.4 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M25.8 19a1.2 1.2 0 1 0 2.4 0a1.2 1.2 0 1 0 -2.4 0z" fill="#FFFFFF" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="sd-avatar__mouth"><path d="M15 29q2.5 2.5 5 0q2.5 2.5 5 0" fill="none" stroke="#1D1B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><path d="M6.6 27a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0z" fill="#FF9EC4" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/><path d="M28.6 27a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0z" fill="#FF9EC4" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></g></svg></span></span>
+            </div>
+            <h2>Put a team on your next idea</h2>
+            <p class="lead">
+              Download Studio desk, send the code sample its first idea, and watch it get planned, built, tested and
+              reviewed, with you making the calls. Free and open source, on the subscription you already have.
+            </p>
+            <a class="btn btn--primary" href="https://github.com/studiodesk/studio-desk">
+              Get Studio desk on GitHub
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <a class="brand" href="./"><img src="assets/logo.svg" alt="" width="30" height="30" />Studio desk</a>
+        <nav aria-label="More">
+          <a href="https://github.com/studiodesk/studio-desk">GitHub</a>
+          <a href="https://github.com/studiodesk/studio-desk/releases">Releases</a>
+          <a href="blog/">Blog</a>
+          <a href="https://github.com/studiodesk/studio-desk/blob/main/LICENSE">MIT license</a>
+        </nav>
+        <p>This site sets no cookies and runs no analytics.</p>
+      </div>
+    </footer>
+  </body>
+</html>

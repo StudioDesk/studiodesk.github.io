@@ -1,0 +1,307 @@
+/* The demo's own pieces. The dashboard itself is the app's stylesheet (assets/app: tokens.css, bundle.css, copied
+   unchanged); this file only names the fonts it asks for, and styles what the app doesn't have: the demo's dock, its
+   nudge on the button that waits for the visitor, and a few small lists. Colors are the app's tokens. */
+
+@font-face {
+  font-family: 'Figtree Variable';
+  src: url(../assets/fonts/figtree-latin-wght-normal.woff2) format('woff2-variations');
+  font-weight: 300 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bricolage Grotesque Variable';
+  src: url(../assets/fonts/bricolage-grotesque-latin-opsz-normal.woff2) format('woff2-variations');
+  font-weight: 200 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono Variable';
+  src: url(../assets/fonts/jetbrains-mono-latin-wght-normal.woff2) format('woff2-variations');
+  font-weight: 100 800;
+  font-display: swap;
+}
+
+.demo-noscript {
+  padding: 24px;
+}
+
+/* The dock: the one thing on screen that isn't the app. */
+.demo-dock {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right, 0px));
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  max-width: calc(100vw - 32px);
+  padding: 6px 6px 6px 8px;
+  border: 1.5px solid var(--line-2);
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  font-size: 13px;
+}
+.demo-dock__tag {
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 700;
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.demo-dock__words {
+  color: var(--ink-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.demo-dock__speed {
+  display: inline-flex;
+  padding: 2px;
+  border-radius: 999px;
+  background: var(--surface-2);
+}
+.demo-dock button {
+  min-height: 28px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-2);
+  font-weight: 700;
+  cursor: pointer;
+}
+.demo-dock__speed button {
+  padding: 0 9px;
+}
+.demo-dock__speed button[aria-pressed='true'] {
+  background: var(--brand-soft);
+  color: var(--brand-text);
+}
+.demo-dock__restart {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+}
+.demo-dock button:hover {
+  color: var(--ink);
+}
+@media (max-width: 860px) {
+  .demo-dock {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    bottom: calc(92px + env(safe-area-inset-bottom, 0px));
+  }
+  .demo-dock__words {
+    display: none;
+  }
+}
+
+/* The app's toast, lifted above the dock. */
+.sd-toast {
+  bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+}
+@media (max-width: 860px) {
+  .sd-toast {
+    bottom: calc(146px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* The button that waits for the visitor glows until it's pressed. */
+.demo-nudge {
+  animation: demo-nudge 1.8s ease-in-out infinite;
+}
+@keyframes demo-nudge {
+  0%,
+  100% {
+    box-shadow:
+      var(--shadow-button-primary, 0 3px 0 var(--brand-press)),
+      0 0 0 0 color-mix(in srgb, var(--brand) 55%, transparent);
+  }
+  50% {
+    box-shadow:
+      var(--shadow-button-primary, 0 3px 0 var(--brand-press)),
+      0 0 0 8px color-mix(in srgb, var(--brand) 0%, transparent);
+  }
+}
+.demo-others {
+  padding-top: var(--space-4);
+}
+
+/* A plan's steps, in the planner's message and on the plan's page. */
+.demo-plan {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* The end of a run. */
+.demo-end {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-16);
+  align-items: center;
+  padding: 18px 20px;
+  border-color: color-mix(in srgb, var(--ok-dot) 55%, var(--line));
+  background: linear-gradient(120deg, var(--ok-soft), var(--surface) 60%);
+}
+.demo-end__faces {
+  display: flex;
+}
+.demo-end__faces {
+  gap: 4px;
+}
+.demo-end__actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+/* Reviews, attempts and files on a step's page. */
+.demo-review + .demo-review {
+  margin-top: var(--space-16);
+  padding-top: var(--space-16);
+  border-top: 1.5px solid var(--line);
+}
+.demo-review__head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+.demo-finding {
+  display: block;
+}
+.demo-finding .sd-chip {
+  margin-right: 6px;
+}
+.demo-attempts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+.demo-attempts li {
+  display: flex;
+  gap: var(--space-10);
+  align-items: flex-start;
+}
+.demo-file {
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--code-bg);
+}
+.demo-file__name {
+  padding: 8px 12px;
+  border-bottom: 1.5px solid var(--line);
+  background: var(--surface-2);
+}
+.demo-file__body {
+  margin: 0;
+  padding: 12px 14px;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--code-ink);
+  white-space: pre-wrap;
+}
+
+/* The Ideas page: the idea, then each step with what it made. */
+.demo-idea {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-14);
+  padding: 20px;
+}
+.demo-idea__head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+.demo-idea__steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+.demo-idea__step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  padding-top: var(--space-14);
+  border-top: 1.5px solid var(--line);
+}
+.demo-idea__stephead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-10);
+}
+.demo-idea__stephead a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+/* The Agents page, as cards. */
+.demo-agents {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: var(--space-16);
+}
+.demo-agent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-12);
+  padding: 20px;
+}
+.demo-agent__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+.demo-agent--new {
+  border-style: dashed;
+  background: transparent;
+}
+.demo-agent__plus {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  border: 1.5px dashed var(--line-2);
+  color: var(--ink-3);
+}
+
+/* Project settings: the house rules, read only. */
+.demo-rules {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: 20px;
+  max-width: 640px;
+}
+.demo-rule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-12);
+  padding-bottom: var(--space-10);
+  border-bottom: 1.5px solid var(--line);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-nudge {
+    animation: none;
+  }
+}

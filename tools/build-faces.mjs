@@ -1,11 +1,11 @@
-// Draws the agents' faces into the pages, with agent-kit.js copied unchanged from the app
-// (dashboard/src/design/agent-kit.js), so the site shows the same faces the app does and needs no script for them.
+// Draws the agents' faces into the pages, with the app's agent-kit.js (assets/app, copied unchanged by
+// tools/sync-app.mjs), so the site shows the same faces the app does and needs no script for them.
 // Each <span class="face" data-face="planner" data-size="40"></span> is filled in place, so running it again only
-// redraws them. data-done adds the face's happy eyes, shown when its station in the flow is done.
+// redraws them. data-done adds the face's happy eyes, which show where a hover cheers it up.
 // Run from the site's folder: node tools/build-faces.mjs
 import fs from 'node:fs';
 import path from 'node:path';
-import { build, CLASSIC, rhythm, VIEWBOX } from './agent-kit.js';
+import { build, CLASSIC, rhythm, VIEWBOX } from '../assets/app/agent-kit.js';
 
 // The starting team's faces, by the role each plays on the site; their names never appear.
 const looks = { planner: 0, agent: 1, reviewer: 2, checks: 3, writer: 4 };
@@ -31,7 +31,7 @@ const root = path.resolve(import.meta.dirname, '..');
 const pages = [];
 const walk = folder => {
   for (const entry of fs.readdirSync(folder, { withFileTypes: true })) {
-    if (entry.name.startsWith('.') || entry.name === 'tools' || entry.name === 'assets') continue;
+    if (entry.name.startsWith('.') || ['tools', 'assets', 'demo'].includes(entry.name)) continue;
     const full = path.join(folder, entry.name);
     if (entry.isDirectory()) walk(full);
     else if (entry.name.endsWith('.html')) pages.push(full);

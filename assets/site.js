@@ -74,3 +74,47 @@
     { passive: true },
   );
 })();
+
+// Pictures in a post open larger: a click (or Enter) opens the picture in a dialog that fits the window, a click on the
+// picture there shows it at full size to scroll through, and Escape, Close or a click outside closes it and returns
+// focus to the picture.
+(() => {
+  const pictures = document.querySelectorAll('.post-art img, img[data-zoom]');
+  if (!pictures.length || typeof HTMLDialogElement !== 'function') return;
+  const dialog = document.createElement('dialog');
+  dialog.className = 'lightbox';
+  dialog.setAttribute('aria-label', 'Picture, larger');
+  dialog.innerHTML =
+    '<button type="button" class="lightbox__close" aria-label="Close">' +
+    '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>' +
+    '</button><div class="lightbox__frame"><img alt="" /></div>' +
+    '<p class="lightbox__hint">Click the picture to see it at full size. Escape closes it.</p>';
+  document.body.append(dialog);
+  const frame = dialog.querySelector('.lightbox__frame'),
+    large = dialog.querySelector('img');
+  let opener = null;
+  const close = () => dialog.close();
+  dialog.querySelector('.lightbox__close').addEventListener('click', close);
+  // A click on the backdrop lands on the dialog itself.
+  dialog.addEventListener('click', event => event.target === dialog && close());
+  large.addEventListener('click', () => frame.classList.toggle('is-full'));
+  dialog.addEventListener('close', () => {
+    frame.classList.remove('is-full');
+    opener?.focus();
+  });
+  for (const picture of pictures) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'zoomable';
+    button.innerHTML = '<span class="zoomable__hint" aria-hidden="true">Click to enlarge</span>';
+    picture.replaceWith(button);
+    button.prepend(picture);
+    button.setAttribute('aria-label', `Open larger: ${picture.alt}`);
+    button.addEventListener('click', () => {
+      opener = button;
+      large.src = picture.currentSrc || picture.src;
+      large.alt = picture.alt;
+      dialog.showModal();
+    });
+  }
+})();
